@@ -1,0 +1,187 @@
+label {
+    font-weight: bold;
+}
+.header {
+    padding: 0 50px 0 50px;
+}
+.header .header-middle {
+    background-color: rgb(169, 224, 226);
+    padding: 60px;
+}
+.top-header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;  
+}
+.f50 {
+    font-size: 50px;
+}
+.top-header .logo-left,
+.top-header .logo-right {
+    padding: 10px;
+    max-width: 150px;
+}
+.top-header .logo-left img,
+.top-header .logo-right img {
+    max-width: 100%;
+}
+
+.header .main-menu {
+    display: flex;
+}
+.header .main-menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+.header .main-menu ul li{
+    display: inline-flex;
+    flex: 100%;
+    position: relative;
+}
+.header .main-menu ul li a{
+    padding: 8px 15px;
+    display: inline-flex;
+    justify-content: center;
+    background: red;
+    flex: 100%;
+    color: white;
+}
+.header .main-menu ul li a:hover{
+    font-weight: bold;
+    text-decoration: none;
+}
+.header .main-menu ul li ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.header .main-menu ul li:hover ul{
+    display: block;
+}
+
+.blink_me {
+    display: block;
+    color: blue;
+    font-size: 28px;
+    font-weight: bold;
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    25% {
+      opacity: 0;
+      color: blue;
+    }
+    40% {
+      opacity: 0;
+      color: red;
+    }
+    100% {
+      opacity: 1;
+      color: red;
+    }
+  }
+
+  /* Account Option*/
+  .account-trigger {
+      position: absolute;
+      right: 0;
+      top: -50px;
+      right: 15px
+  }
+  .login-form {
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 5px 20px rgb(34, 116, 61);
+  }
+
+  /*OPD List Page Css below*/
+
+  .modal-backdrop.fade.show {
+    display: none
+}
+
+.infoModal h4 {
+    color: #333
+}
+
+.infoModal p {
+    color: #777
+}
+
+.modal-open .modal {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+div.pagination a {
+    padding: 2px 12px;
+    border: solid 1px #ddd;
+    color: #777;
+    text-decoration: none;
+}
+
+div.pagination a:hover {
+    padding: 2px 12px;
+    border: solid 1px teal;
+    color: teal
+}
+
+div.pagination strong {
+    padding: 2px 12px;
+    border: solid 1px teal;
+    color: teal
+}
+
+marquee p{
+    background: -webkit-linear-gradient(blue, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blinker2 1s linear infinite;
+}
+@keyframes blinker2 {
+    50% {
+      background: red;
+      -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+  }
+
+ .patient-entry-form strong.text-danger {
+     font-size: 11px;
+ } 
+
+
+
+ @media screen and (max-width: 768px) {
+     .logo-left,.logo-right {
+         display: none;
+     }
+    .header {
+        padding: 0!important;
+    }
+    .header-middle h2 {
+        font-size: 18px;
+    }
+    .f50 {
+        font-size: 30px;
+    }
+    .left,.right {
+        min-height: unset!important;
+        order: 1;
+    }
+    .col-md-6.p-0{
+        padding-left: 15px!important;
+    }
+    .patient-entry-form .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,57 @@
+body {
+    background: #000 url('../images/banner.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+body::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.85;
+    background:rgb(14, 146, 96);
+    content: "";
+}
+label {
+    color: #fff;
+}
+.main-menu {
+    display: none!important;
+}
+.header-middle {
+    background-color: transparent!important;
+    margin: auto;
+    z-index: 1;
+}
+.header-middle h2{
+    color: #fff;
+}
+header > .container {
+    border: none!important;
+}
+.logo-left,.logo-right {
+    display: none;
+}
+.login-form {
+    z-index: 1;
+}
+.bg-success  {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0!important;
+    }
+    .header-middle h2 {
+        font-size: 18px;
+    }
+    .f50 {
+        font-size: 30px;
+    }
+}
