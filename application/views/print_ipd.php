@@ -13,16 +13,51 @@
             display: none;
             visibility: hidden;
         }
+
+        #print {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .head {
+            height: 80px;
+        }
+    }
+
+    .head {
+        font-weight: bold;
     }
 
     #print {
-        max-width: 8.5in;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
         margin: auto;
+        border-bottom: solid 1px #000;
+    }
+
+    #details,
+    #details table {
+        height: 100%;
     }
 
     body div.bg-success {
         display: none;
         visibility: hidden;
+    }
+
+    #print h2 {
+        text-align: center;
+    }
+
+    #print .table table {
+        width: 100%
     }
 
     #print .table table td {
@@ -42,10 +77,10 @@
     table,
     table th,
     table td {
-        border-color: #ddd;
+        border-color: #000 !important;
         border-width: 0.7px;
         border-style: solid;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     p {
@@ -96,11 +131,11 @@
                 <td colspan="4">
                     <table class="border-0">
                         <tr>
-                            <td width="30"><strong>उम्र</strong></td>
-                            <td width="30"><?php echo $age ?></td>
-                            <td width="40"><strong>लिंग</strong></td>
-                            <td width="50"><?php echo $gender ?></td>
-                            <td width="30"><strong>रोग</strong></td>
+                            <td width="40"><strong>उम्र</strong></td>
+                            <td width="40"><?php echo $age ?></td>
+                            <td width="50"><strong>लिंग</strong></td>
+                            <td width="70"><?php echo $gender ?></td>
+                            <td width="50"><strong>रोग</strong></td>
                             <td><?php echo $disease ?></td>
                         </tr>
                     </table>
@@ -108,16 +143,16 @@
             </tr>
         </table>
         <div id="details">
-            <table cellpadding="10" width="100%">
-                <thead>
-                    <th>दिनांक:</th>
-                    <th colspan="4">
+            <table cellpadding="10" width="100%" height="100%">
+                <tr>
+                    <td class="head">निदान:</td>
+                    <td class="head" colspan="4">
                         <p>यह पर्ची जारी होने के 7 दिन बाद तक वैध है।</p>
-                    </th>
-                </thead>
+                    </td>
+                </tr>
                 <tr>
                     <td width="150"></td>
-                    <td colspan="4" height="500" valign="top">
+                    <td colspan="4" valign="top">
 
                     </td>
                 </tr>
